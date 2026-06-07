@@ -6,3 +6,4 @@
             require_once "../App/Views/{$view}.php"; 
         }
     }
+?>
