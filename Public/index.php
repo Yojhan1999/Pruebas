@@ -1,4 +1,5 @@
 <?php
+define('BASE_URL', '/prueba/Public/');
 require_once "../Core/Autoloader.php";
 
 $controller = $_GET['controller'] ?? 'user';
@@ -7,7 +8,7 @@ $action     = $_GET['action'] ?? 'index';
 $controllerName = ucfirst($controller) . 'Controller';
 
 if(class_exists($controllerName)){
-    $controllerInstance = new $controllerInstance();
+    $controllerInstance = new $controllerName();
     if (method_exists($controllerInstance, $action)) {
         $controllerInstance->$action();
     }else{

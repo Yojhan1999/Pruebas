@@ -10,7 +10,7 @@
 <body>
     <h1 class="text-center mb-4">Lista de Usuarios</h1>
     <div class="d-flex justify-content-end mb-3">
-        <a href="?controller=user&action-create" class="btn btn-primary">Crear un Usuario</a>
+        <a href="?controller=user&action=create" class="btn btn-primary">Crear un Usuario</a>
     </div>
     <table class="table table-bordered table-striped">
         <thead class="table-light">
@@ -28,8 +28,8 @@
                 <td><?= htmlspecialchars($user['nombre'])?></td>
                 <td><?= htmlspecialchars($user['correo'])?></td>
                 <td>
-                    <a href="?controller=user&action-edit&id"=<?= $user['id']?> class="btn btn-warning btn-sm me-2">Editar</a>
-                    <a href="?controller=user&action-delete&id"=<?= $user['id']?> class="btn btn-danger btn-sm">Editar</a>
+                    <a href="?controller=user&action=edit&id=<?= $user['id']?>" class="btn btn-warning btn-sm me-2">Editar</a>
+                    <a href="?controller=user&action=delete&id=<?= $user['id']?>" class="btn btn-danger btn-sm">Eliminar</a>
                 </td>
             </tr>
             <?php endforeach; ?>
